@@ -13,8 +13,10 @@ jobs:
     steps:
     - uses: actions/checkout@v4
 
-    - name: Debug
-      run: ./gradlew -q javaToolchains
+    - uses: actions/setup-java@v4
+      with:
+        distribution: 'temurin'
+        java-version: '21'
 
     - name: Run tests
       run: ./gradlew test
