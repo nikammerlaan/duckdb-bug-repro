@@ -13,5 +13,8 @@ jobs:
     steps:
     - uses: actions/checkout@v4
 
+    - name: Debug
+      run: ./gradlew -q javaToolchains
+
     - name: Run tests
       run: ./gradlew test
